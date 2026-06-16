@@ -1,0 +1,427 @@
+/* 全体 */
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+  background: #f7f9f5; /* 淡いミント寄りの白 */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ヘッダー */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2f4f4f; /* 深い緑 */
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #6b8e23; /* オリーブ */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ヒーローセクション */
+.hero {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #2f4f4f;
+}
+
+.hero-text p {
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 12px;
+}
+
+/* About導線 */
+.intro {
+  text-align: center;
+  margin: 80px 0;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Worksカード */
+.works-preview {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.works-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  display: block;
+  flex: 1;
+  background: #ffffff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  display: block;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 背景画像を薄く敷く */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* ← 薄さ調整 */
+  pointer-events: none;
+}
+
+/* 作品ごとに背景を変える */
+.standard-bg::before {
+  background-image: url("images/standard_icon.png");
+}
+
+.pokemon-bg::before {
+  background-image: url("images/pokemon_icon.png");
+}
+
+.fe-bg::before {
+  background-image: url("images/FE_icon.png");
+}
+.works-preview h3 {
+  text-align: center;
+}
+
+/* Skills */
+.skills-preview {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+.skills-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.skills-preview h3 {
+  text-align: center;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #6b8e23;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* standard.html */
+/* 作品ページ全体 */
+.work-detail {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* タイトル部分 */
+.work-hero h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2f4f4f;
+}
+
+.work-hero .sub {
+  text-align: center;
+  margin-top: 10px;
+  color: #556b2f;
+  font-size: 1rem;
+}
+
+/* 作品画像 */
+.work-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* セクション見出し */
+.work-info h3 {
+  margin-top: 40px;
+  color: #2f4f4f;
+  border-left: 4px solid #6b8e23;
+  padding-left: 10px;
+}
+
+/* リスト */
+.work-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.work-info li {
+  margin-bottom: 6px;
+}
+
+/* 戻るボタン */
+.back-btn {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.back-btn a {
+  color: #6b8e23;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-btn a:hover {
+  text-decoration: underline;
+}
+
+/* pokemon.html */
+.poke-status {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 3px solid #3b4cca; /* ポケモンの青 */
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.poke-status .label {
+  font-weight: bold;
+  color: #3b4cca;
+}
+
+/* とくせい・せいかく・ステータス */
+.poke-detail {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 3px solid #3b4cca;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.poke-detail h4 {
+  margin-top: 20px;
+  color: #3b4cca;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #3b4cca;
+  padding-bottom: 4px;
+}
+
+.status-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.status-list li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.dot-font {
+  font-family: "DotGothic16", sans-serif;
+}
+
+/* ステータスバー全体 */
+.status-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+/* 左のラベル（HPなど） */
+.status-bar .label {
+  width: 140px;
+  font-weight: bold;
+  color: #3b4cca; /* ポケモン青 */
+}
+
+/* ゲージの枠 */
+.status-bar .bar {
+  flex: 1;
+  height: 12px;
+  background: #e0e0e0;
+  border: 2px solid #3b4cca;
+  border-radius: 6px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+/* ゲージの中身（HP量） */
+.status-bar .fill {
+  height: 100%;
+  background: #6bc46b; /* HPっぽい緑 */
+  border-radius: 4px;
+}
+
+/* 右の数値 */
+.status-bar .value {
+  width: 40px;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+
+/* FE.html */
+.fe-font {
+  font-family: "DotGothic16", sans-serif;
+}
+/* FE風タイトル部分 */
+.fe-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fe-name {
+  font-size: 2rem;
+  color: #1c3b5a; /* 蒼炎の深い青 */
+  margin-bottom: 5px;
+}
+
+.fe-class {
+  color: #6b8e23; /* 森のアクセント */
+  font-size: 1.1rem;
+}
+
+/* FE風ステータス枠 */
+.fe-status {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px 23px;
+  background: #fdfdfc;
+  border: 3px solid #1c3b5a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.fe-status h3 {
+  margin-top: 25px;
+  color: #1c3b5a;
+  border-left: 3px solid #6b8e23;
+  padding-left: 12px;
+}
+
+.fe-status ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.fe-status li {
+  margin-bottom: 6px;
+}
+
+/* 能力値リスト（FEっぽく2列） */
+.fe-stats {
+  columns: 2;
+}
+
+/* 背景と枠の質感 */
+.fe-status {
+  background: linear-gradient(180deg, #1c3b5a 0%, #0f1e2e 100%);
+  color: #fdfdfc;
+  border: 3px solid #d4af37; /* 金縁 */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  padding: 25px;
+}
+
+/* 左右分割レイアウト */
+.fe-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* 見出し */
+.fe-status h3 {
+  color: #d4af37;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 4px;
+}
+
+/* 能力値リスト */
+.fe-stats li {
+  margin-bottom: 4px;
+}
+
+/* スキル欄 */
+.fe-status ul {
+  list-style: none;
+  padding-left: 0;
+}
