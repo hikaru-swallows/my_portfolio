@@ -137,6 +137,11 @@ html {
 .fe-bg::before {
   background-image: url("images/FE_icon.png");
 }
+
+.todo-bg::before {
+  background-image: url("images/todolist_icon.png");
+}
+
 .works-preview h3 {
   text-align: center;
 }
@@ -207,7 +212,7 @@ html {
   max-width: 600px;
   margin: 40px auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* セクション見出し */
@@ -252,7 +257,7 @@ html {
   background: #ffffff;
   border: 3px solid #3b4cca; /* ポケモンの青 */
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   font-size: 1.1rem;
   line-height: 1.8;
 }
@@ -270,7 +275,7 @@ html {
   background: #ffffff;
   border: 3px solid #3b4cca;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .poke-detail h4 {
@@ -366,7 +371,7 @@ html {
   background: #fdfdfc;
   border: 3px solid #1c3b5a;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .fe-status h3 {
@@ -396,7 +401,7 @@ html {
   color: #fdfdfc;
   border: 3px solid #d4af37; /* 金縁 */
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   padding: 25px;
 }
 
